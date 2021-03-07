@@ -19,12 +19,14 @@
       <p id='power'>
         <span class='battery'>🔋</span>
         <span id='bars'>▯▯▯▯▯▯▯▯▯▯</span>
-        <span id='percent'>0</span>
+        <span class='percent' id='percent'>0</span>
         <span>%</span>
         <span class='charging' id='charging'>⚡</span>
       </p>
 
       <input id='percent-input' type='number' value='50' min='0' max='100' onchange='updateBattery(this)'></input>
+
+      <p id='message'></p>
 
     </div>
   </body>

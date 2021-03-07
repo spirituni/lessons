@@ -2,13 +2,15 @@
   variables
 */
 
-var battery = 50;        // perecentage of battery power that aki has (0 - 100)
+var battery = 50;       // perecentage of battery power that aki has (0 - 100)
 
 var color = red;        // color of aki's power indicator
 
 var pluggedIn = false;  // whether aki is connected to the charging port or not
 var hasPower = false;   // whether aki's battery has power or not
 var isCharging = false  // whether aki is currently charging or not
+
+var indicator = '';     // a battery indicator message
 
 function updateValues() {
 /*
@@ -57,12 +59,12 @@ isCharging = pluggedIn;
 /*
   if blocks (comparators):
   
-    5. just to be safe, aki should be charged before her battery is completely empty - using an if statement, 
+    5. just to be safe, aki should be charged before her battery is completely empty - using an if statement, plug aki in when her battery is under 20, and make sure she's charging when she's plugged in!
 
     6. aki doesn't want her indicator to be scary red all the time - using if/else if/else statements, change the color to:
-    - red (0)
-    - yellow (1-50)
-    - green (51-100)
+    - red (0-19)
+    - yellow (20-49)
+    - green (50-100)
 
     remember, comparators you can use are:
     - == (equal to)
@@ -73,22 +75,52 @@ isCharging = pluggedIn;
 */
 
 // 5
+if (battery < 20) {
+  pluggedIn = true;
+} else if (battery == 100) {
+  pluggedIn = false;
+}
 
-
+isCharging = pluggedIn;
 
 // 6
-
-
+if (battery < 20) {
+  color = red;
+} else if (battery < 50) {
+  color = yellow;
+} else {
+  color = green;
+}
 
 /*
   switch blocks:
 
-     7.
-
+     7. aki can send out indicator messages to notify you when her battery reaches certain percentages - using a switch statement, trigger and fill out her notifs at:
+     - 0%   (empty)
+     - 50%  (halfway)
+     - 100% (full)
 */
 
-
 // 7.
+console.log(battery);
+switch(battery) {
+  case 0:
+    indicator = 'empty';
+    break;
+  case 50:
+    indicator = 'halfway';
+    break;
+  case 100:
+    indicator = 'full';
+    break;
+  default:
+    indicator = '';
+}
 
+/*
+  (bonus) cleaning it all up:
+    8. go back and remove or comment out all the code that no longer does anything!
+
+*/
 
 }

@@ -19,8 +19,8 @@ function updateBattery(percentInput) {
     percentInput.value = 100;
   }
 
-  // update and print out battery value
-  battery = percentInput.value;
+  // update and print out battery value as an int
+  battery = parseInt(percentInput.value, 10);
 
   // change displayed percentage based on battery value
   let percent = document.getElementById('percent');
@@ -45,8 +45,9 @@ function updateBattery(percentInput) {
   updatePlug();
   updateCharging();
   updateAki();
+  updateMessage();
 
-  console.log('battery is now at', percentInput.value, '% | plugged in?', pluggedIn, '| charging?', isCharging);
+  // console.log('battery is now at', battery, '% | plugged in?', pluggedIn, '| charging?', isCharging);
 }
 
 function updateColors() {
@@ -54,6 +55,11 @@ function updateColors() {
   let power = document.getElementById('power').style;
   if (power !== null) {
     power.color = color;
+  }
+
+  let message = document.getElementById('message').style;
+  if (message !== null) {
+    message.color = color;
   }
 
 }
@@ -86,4 +92,13 @@ function updateAki() {
     asleep.display = 'none';
     awake.display = 'inline';
   }
+}
+
+function updateMessage() {
+
+  let message = document.getElementById('message');
+  if (message !== null) {
+    message.textContent = indicator;
+  }
+
 }

@@ -22,6 +22,11 @@
   visibility: hidden;
 }
 
+.percent {
+  display: inline-block;
+  width: 16px;
+}
+
 input[type=number] {
   text-align: center;
   border: none;
