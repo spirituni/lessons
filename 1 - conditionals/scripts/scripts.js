@@ -40,7 +40,6 @@ function updateBattery(percentInput) {
   bars.textContent = pips;
 
   updateValues();
-
   updateColors();
   updatePlug();
   updateCharging();

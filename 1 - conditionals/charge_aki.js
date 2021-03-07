@@ -102,7 +102,6 @@ if (battery < 20) {
 */
 
 // 7.
-console.log(battery);
 switch(battery) {
   case 0:
     indicator = 'empty';
