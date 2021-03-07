@@ -101,7 +101,7 @@ if (battery < 20) {
      - 100% (full)
 */
 
-// 7.
+// 7
 switch(battery) {
   case 0:
     indicator = 'empty';
