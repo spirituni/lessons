@@ -5,13 +5,9 @@ const green = '#8BD448';
 
 window.onload = function() {
 
-  // initial values
-  let power = document.getElementById('power').style;
-
-  if (power !== null) {
-    power.color = color;
-  }
-
+  let percentInput = document.getElementById('percent-input');
+  updateBattery(percentInput);
+ 
 };
 
 function updateBattery(percentInput) {
@@ -25,7 +21,6 @@ function updateBattery(percentInput) {
 
   // update and print out battery value
   battery = percentInput.value;
-  console.log('battery is now at', percentInput.value, '%');
 
   // change displayed percentage based on battery value
   let percent = document.getElementById('percent');
@@ -44,4 +39,51 @@ function updateBattery(percentInput) {
   let bars = document.getElementById('bars');
   bars.textContent = pips;
 
+  updateValues();
+
+  updateColors();
+  updatePlug();
+  updateCharging();
+  updateAki();
+
+  console.log('battery is now at', percentInput.value, '% | plugged in?', pluggedIn, '| charging?', isCharging);
+}
+
+function updateColors() {
+
+  let power = document.getElementById('power').style;
+  if (power !== null) {
+    power.color = color;
+  }
+
+}
+
+function updatePlug() {
+  
+  let plug = document.getElementById('plug').style;
+  if (plug !== null) {
+    pluggedIn ? plug.visibility = 'visible' : plug.visibility = 'hidden';
+  }
+
+}
+
+function updateCharging() {
+  
+  let charging = document.getElementById('charging').style;
+  if (charging !== null) {
+    isCharging ? charging.visibility = 'visible' : charging.visibility = 'hidden';
+  }
+
+}
+
+function updateAki() {
+  let awake = document.getElementById('awake').style;
+  let asleep = document.getElementById('asleep').style;
+  if (battery == 0) {
+    asleep.display = 'inline';
+    awake.display = 'none';
+  } else {
+    asleep.display = 'none';
+    awake.display = 'inline';
+  }
 }
