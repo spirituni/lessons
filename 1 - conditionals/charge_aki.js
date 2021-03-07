@@ -13,6 +13,7 @@ var isCharging = false  // whether aki is currently charging or not
 var indicator = '';     // a battery indicator message
 
 function updateValues() {
+  
 /*
   if blocks (logic gates):
 
@@ -35,26 +36,20 @@ function updateValues() {
 */
 
 // 1
-if (battery == 0) {
-  pluggedIn = true;
-}
+
+
 
 // 2
-if (pluggedIn && battery != 100) {
-  isCharging = true;
-} else {
-  isCharging = false;
-}
+
+
 
 // 3
-if (battery == 0) {
-  pluggedIn = true;
-} else if (battery == 100) {
-  pluggedIn = false;
-}
+
+
 
 // 4
-isCharging = pluggedIn;
+
+
 
 /*
   if blocks (comparators):
@@ -75,22 +70,12 @@ isCharging = pluggedIn;
 */
 
 // 5
-if (battery < 20) {
-  pluggedIn = true;
-} else if (battery == 100) {
-  pluggedIn = false;
-}
 
-isCharging = pluggedIn;
+
 
 // 6
-if (battery < 20) {
-  color = red;
-} else if (battery < 50) {
-  color = yellow;
-} else {
-  color = green;
-}
+
+
 
 /*
   switch blocks:
@@ -102,19 +87,8 @@ if (battery < 20) {
 */
 
 // 7
-switch(battery) {
-  case 0:
-    indicator = 'empty';
-    break;
-  case 50:
-    indicator = 'halfway';
-    break;
-  case 100:
-    indicator = 'full';
-    break;
-  default:
-    indicator = '';
-}
+
+
 
 /*
   (bonus) cleaning it all up:
