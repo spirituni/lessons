@@ -6,6 +6,7 @@ const green = '#8BD448';
 window.onload = function() {
 
   let percentInput = document.getElementById('percent-input');
+  percentInput.value = battery;
   updateBattery(percentInput);
  
 };
