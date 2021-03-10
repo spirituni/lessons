@@ -18,7 +18,7 @@ function updateValues() {
 
     1. since aki is battery powered, we need to know when to charge aki - using an if statement, try plugging aki in when she has no power
 
-    2. let's make sure aki's indicator shows when she's charging - using if/else statements:
+    2. let's make sure aki's is charging when she's plugged in - using if/else statements:
 
       i. make isCharging true when aki is pluggedIn
 
