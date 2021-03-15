@@ -2,10 +2,16 @@
 
 1 - conditionals
 
-2 - loops (coming soon)
+2 - simple loops
 
-3 - functions (coming soon)
+# upcoming
 
-4 - data types (coming soon)
+- data types
 
-5 - classes, objects (coming soon)
+- arrays
+
+- more loops
+
+- functions
+
+- classes, objects
