@@ -7,7 +7,7 @@ var battery = 50;       // perecentage of battery power that aki has (0 - 100)
 var color = red;        // color of aki's power indicator
 
 var pluggedIn = false;  // whether aki is connected to the charging port or not
-var isCharging = false  // whether aki is currently charging or not
+var isCharging = false; // whether aki is currently charging or not
 
 var indicator = '';     // a battery indicator message
 
