@@ -110,7 +110,7 @@ function updateBar() {
       bar += '▯';
     }
   }
-  
+ 
 /*
   (bonus) constants:
     3. instead of writing out the length of the bar each time, try using a constant!
