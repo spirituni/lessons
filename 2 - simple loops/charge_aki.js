@@ -6,7 +6,7 @@ var battery = 50;                     // perecentage of battery power that aki h
 var indicator = '';                   // a battery indicator message
 var bar = '';                         // a battery indicator bar made of boxes
 
-const maxLength = 50;                 // maximum number of boxes in the battery bar (read-only)
+const maxLength = 10;                 // maximum number of boxes in the battery bar (read-only)
 const percentPerBox = 100/maxLength;  // percentage of battery each box represents (read-only)
 
 function updateBar() {
