@@ -1,12 +1,13 @@
 /*
   starting variables
 */
-var battery = 50;       // perecentage of battery power that aki has (0 - 100)
+var battery = 50;                     // perecentage of battery power that aki has (0 - 100)
 
-var indicator = '';     // a battery indicator message
-var bar = '';           // a battery indicator bar made of boxes
+var indicator = '';                   // a battery indicator message
+var bar = '';                         // a battery indicator bar made of boxes
 
-const maxLength = 10;   // maximum number of boxes in the battery bar (read-only)
+const maxLength = 10;                 // maximum number of boxes in the battery bar (read-only)
+const percentPerBox = 100/maxLength;  // percentage of battery each box represents (read-only)
 
 function updateBar() {
   
@@ -23,7 +24,6 @@ function updateBar() {
 
       ▯ - empty box
       ▮ - filled box
-
 */
 
 // 1 i
@@ -57,17 +57,16 @@ function updateBar() {
 // 2 ii
 
 
-  
+
+// 2 iii
+
+
+
 /*
   (bonus) constants:
     3. instead of writing out the length of the bar each time, try using a constant!
     
     4. now do all the loops using decrements (--) instead of increments (++), but make sure to keep the battery bar behaviour the same
-
 */
-
-  // 3
-
-  
 
 }

@@ -92,7 +92,6 @@ function updateValues() {
 /*
   (bonus) cleaning it all up:
     8. go back and remove or comment out all the code that no longer does anything!
-
 */
 
 }
