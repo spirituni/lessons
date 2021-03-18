@@ -90,7 +90,7 @@ function updateBar() {
 
   // filled boxes
   var i = 0;                      // can also be written as: var i;
-  for (; i < battery/maxLength; ++i) {   //                         for (i = 0; i < battery/10; ++i) {
+  for (; i < battery/percentPerBox; ++i) {   //                         for (i = 0; i < battery/10; ++i) {
     bar += '▮';
   }
 
