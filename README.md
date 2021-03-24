@@ -6,7 +6,7 @@
 
 2 - simple loops | [stream](https://youtu.be/pEQzy7nbrLE), [solution](https://github.com/spirituni/lessons/pull/2)
 
-3 - data types | [stream]()
+3 - data types | [stream](https://youtu.be/E4P_IDJNJq8)
 
 # upcoming
 
