@@ -27,16 +27,44 @@ function updateBar() {
 */
 
 // 1 i
+  bar = '';
+  var length = 0;
 
-
+  while (length < maxLength) {
+    bar += '▯';                // can also be written: bar = bar + '▯';
+    ++length;                   // can also be written: length = length + 1;
+                                // or even            : length += 1;
+                                // or                 : length++;
+  }
 
 // 1 ii
+  bar = '';
+  var length = 0;
 
+  // filled boxes
+  while (length < battery/percentPerBox) {   // can also be written: while (length*percentPerBox < battery) {
+    bar += '▮';
+    ++length;
+  }
 
+  // empty boxes
+  while (length < maxLength) {
+    bar += '▯';
+    ++length;
+  }
 
 // 1 iii
+  bar = '';
+  var length = 0;
 
-
+  while (length < maxLength) {
+    if (length < battery/percentPerBox) {
+      bar += '▮';
+    } else {
+      bar += '▯';
+    }
+    ++length;
+  }
 
 /*
   for loops:
@@ -51,17 +79,38 @@ function updateBar() {
 */
 
 // 2 i
+  bar = '';
 
-
+  for (var i = 0; i < maxLength; ++i) {
+    bar += '▯';
+  }
 
 // 2 ii
+  bar = '';
 
+  // filled boxes
+  var i = 0;                      // can also be written as: var i;
+  for (; i < battery/percentPerBox; ++i) {   //                         for (i = 0; i < battery/10; ++i) {
+    bar += '▮';
+  }
 
+  // empty boxes
+  for (; i < maxLength; ++i) {
+    bar += '▯';
+  }
 
 // 2 iii
+  bar = '';
 
-
-
+  var i = 0;
+  for (var i = 0; i < maxLength; ++i) {
+    if (i < battery/percentPerBox) {
+      bar += '▮';
+    } else {
+      bar += '▯';
+    }
+  }
+ 
 /*
   (bonus) constants:
     3. instead of writing out the length of the bar each time, try using a constant!
