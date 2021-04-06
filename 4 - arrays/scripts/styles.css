@@ -13,13 +13,13 @@ button {
   border: none;
   outline: none;
   vertical-align: top;
+  color: #000;
 }
 
 .grid {
   margin-bottom: 7px;
   border-radius: 2px;
   background-color: #b3ebe5;
-  color: #fff;
   transition: 100ms;
 }
 
@@ -30,8 +30,7 @@ button {
 }
 
 .grid:disabled {
-  background-color: #fff;
-  color: #000;
+  background-color: #fffed4;
   cursor: default;
 }
 
