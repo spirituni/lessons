@@ -32,6 +32,10 @@ function check(player, i) {
 
       2. now that we have the value of each array slot printing out, let's format it in a way that's easy to read
 
+      0 1 2
+      3 4 5
+      6 7 8
+
   */
 
   var out = '';
@@ -56,6 +60,53 @@ function check(player, i) {
 
   */
 
+  // 3
+  var win = false;
+
+  if (board[0] == player &&
+      board[1] == player &&
+      board[2] == player ) {
+    win = true;
+  } else if (board[3] == player &&
+             board[4] == player &&
+             board[5] == player ) {
+    win = true;
+  } else if (board[6] == player &&
+             board[7] == player &&
+             board[8] == player ) {
+    win = true;
+  }
+
+  // 4
+  else if (board[0] == player &&
+      board[3] == player &&
+      board[6] == player ) {
+    win = true;
+  } else if (board[1] == player &&
+             board[4] == player &&
+             board[7] == player ) {
+    win = true;
+  } else if (board[2] == player &&
+             board[5] == player &&
+             board[8] == player ) {
+    win = true;
+  }
+
+  // 5
+  else if (board[0] == player &&
+      board[4] == player &&
+      board[8] == player ) {
+    win = true;
+  } else if (board[2] == player &&
+             board[4] == player &&
+             board[6] == player ) {
+    win = true;
+  }
+
+  if (win) {
+    winner = player;
+  }
+  
 }
 
 function check2d(player, row, col) {
@@ -65,7 +116,7 @@ function check2d(player, row, col) {
   // col:    the number of the column that the player just placed their letter in 
 
   /*
-  
+
     setup:
 
       1. same as before, let's print out the array, only this time, we can to use a loop within a loop (nested loops)
@@ -108,8 +159,11 @@ function check2d(player, row, col) {
   */
 
   /*
+
     with just conditions
+
   */
+
 
 
   /*
@@ -119,42 +173,44 @@ function check2d(player, row, col) {
   */
 
   // 2
-  var win = true;
-  for (var j = 0; j < 3; ++j) {
-    if (board2d[row][j] != player) {
-      win = false;
-    }
-  }
+  // var win = true;
+  // for (var j = 0; j < 3; ++j) {
+  //   if (board2d[row][j] != player) {
+  //     win = false;
+  //   }
+  // }
 
-  if (win) {
-    winner = player;
-  } else {
-    // 3
-    win = true;
-    for (var i = 0; i < 3; ++i) {
-      if (board2d[i][col] != player) {
-        win = false;
-      }
-    }
+  // if (win) {
+  //   winner = player;
+  // } else {
+  //   // 3
+  //   win = true;
+  //   for (var i = 0; i < 3; ++i) {
+  //     if (board2d[i][col] != player) {
+  //       win = false;
+  //     }
+  //   }
 
-    if (win) {
-      winner = player;
-    } else {
-      // 4
-      win = true;
-      if (board2d[1][1] != player) {
-        win = false;
-      } else {
-        if (!(board2d[0][0] == player && board2d[2][2] == player) && !(board2d[0][2] == player && board2d[2][0] == player)) {
-          win = false;
-        }
-        if (win) {
-          winner = player;
-        }
-      }
+  //   if (win) {
+  //     winner = player;
+  //   } else {
+  //     // 4
+  //     win = true;
+  //     if (board2d[1][1] != player) {
+  //       win = false;
+  //     } else {
+  //       if (!(board2d[0][0] == player && board2d[2][2] == player) &&
+  //           !(board2d[0][2] == player && board2d[2][0] == player)) {
+  //         win = false;
+  //       }
 
-    }
-  }
+  //       if (win) {
+  //         winner = player;
+  //       }
+  //     }
+
+  //   }
+  // }
   // console.log(row, col)
   // console.log(win);
 }
