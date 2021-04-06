@@ -163,6 +163,7 @@ function check2d(player, row, col) {
     with just conditions
 
   */
+
   // 2
   var win = false;
 
@@ -258,13 +259,13 @@ function check2d(player, row, col) {
 
   // console.log(row, col)
   // console.log(win);
+  
 }
 
 /*
 
   bonus: what are some ways you can optimize this? think about checks that you're making that might not need to be made in certain situations
   (hint - can you win with less than 3 letters?)
-  (hint - can you win in rows and columns you didn't last place your letter in?)
-
+  (hint - can you win in rows and columns you didn't last place your letter in)?
 
 */
