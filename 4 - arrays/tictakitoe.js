@@ -38,15 +38,7 @@ function check(player, i) {
 
   */
 
-  var out = '';
-  for (var x = 0; x < 9; ++x) {
-    out += board[x];
 
-    if ((x+1)%3 == 0) {
-      out += '\n';
-    }
-  }
-  console.log(out);
 
   /*
 
@@ -60,52 +52,7 @@ function check(player, i) {
 
   */
 
-  // 3
-  var win = false;
 
-  if (board[0] == player &&
-      board[1] == player &&
-      board[2] == player ) {
-    win = true;
-  } else if (board[3] == player &&
-             board[4] == player &&
-             board[5] == player ) {
-    win = true;
-  } else if (board[6] == player &&
-             board[7] == player &&
-             board[8] == player ) {
-    win = true;
-  }
-
-  // 4
-  else if (board[0] == player &&
-           board[3] == player &&
-           board[6] == player ) {
-    win = true;
-  } else if (board[1] == player &&
-             board[4] == player &&
-             board[7] == player ) {
-    win = true;
-  } else if (board[2] == player &&
-             board[5] == player &&
-             board[8] == player ) {
-    win = true;
-  }
-
-  // 5
-  else if (board[0] == player &&
-           board[4] == player &&
-           board[8] == player ) {
-    win = true;
-  } else if (board[2] == player &&
-             board[4] == player &&
-             board[6] == player ) {
-    win = true;
-  }
-
-  if (win) {
-    winner = player;
-  }
 
 }
 
@@ -137,14 +84,7 @@ function check2d(player, row, col) {
 
   */
 
-  var out = '';
-  for (var i = 0; i < 3; ++i) {
-    for (var j = 0; j < 3; ++j) {
-      out += board2d[i][j];
-    }
-    out += '\n';
-  }
-  console.log(out);
+
 
   /*
 
@@ -158,108 +98,8 @@ function check2d(player, row, col) {
 
   */
 
-  /*
 
-    with just conditions
 
-  */
-
-  // 2
-  var win = false;
-
-  if (board2d[0][0] == player &&
-      board2d[0][1] == player &&
-      board2d[0][2] == player ) {
-    win = true;
-  } else if (board2d[1][0] == player &&
-             board2d[1][1] == player &&
-             board2d[1][2] == player ) {
-    win = true;
-  } else if (board2d[2][0] == player &&
-             board2d[2][1] == player &&
-             board2d[2][2] == player ) {
-    win = true;
-  }
-
-  // 3
-  else if (board2d[0][0] == player &&
-           board2d[1][0] == player &&
-           board2d[2][0] == player ) {
-    win = true;
-  } else if (board2d[0][1] == player &&
-             board2d[1][1] == player &&
-             board2d[2][1] == player ) {
-    win = true;
-  } else if (board2d[0][2] == player &&
-             board2d[1][2] == player &&
-             board2d[2][2] == player ) {
-    win = true;
-  }
-
-  // 4
-  else if (board2d[0][0] == player &&
-           board2d[1][1] == player &&
-           board2d[2][2] == player ) {
-    win = true;
-  } else if (board2d[0][2] == player &&
-             board2d[1][1] == player &&
-             board2d[2][0] == player ) {
-    win = true;
-  }
-
-  if (win) {
-    winner = player;
-  }
-
-  /*
-
-    with loops
-
-  */
-
-  // 2
-  var win = true;
-  for (var j = 0; j < 3; ++j) {
-    if (board2d[row][j] != player) {
-      win = false;
-    }
-  }
-
-  if (win) {
-    winner = player;
-  } else {
-    // 3
-    win = true;
-    for (var i = 0; i < 3; ++i) {
-      if (board2d[i][col] != player) {
-        win = false;
-      }
-    }
-
-    if (win) {
-      winner = player;
-    } else {
-      // 4
-      win = true;
-      if (board2d[1][1] != player) {
-        win = false;
-      } else {
-        if (!(board2d[0][0] == player && board2d[2][2] == player) &&
-            !(board2d[0][2] == player && board2d[2][0] == player)) {
-          win = false;
-        }
-
-        if (win) {
-          winner = player;
-        }
-      }
-
-    }
-  }
-
-  // console.log(row, col)
-  // console.log(win);
-  
 }
 
 /*
