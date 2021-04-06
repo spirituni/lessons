@@ -6,14 +6,14 @@
 
 2 - simple loops | [stream](https://youtu.be/pEQzy7nbrLE), [solution](https://github.com/spirituni/lessons/pull/2)
 
-3 - data types | [stream](https://youtu.be/E4P_IDJNJq8)
+3 - data types | [stream](https://youtu.be/E4P_IDJNJq8), [examples](https://github.com/spirituni/lessons/blob/main/3%20-%20data%20types/types.cpp)
+
+4 - arrays | [stream](), [solution]()
 
 # upcoming
-
-- arrays
-
-- more loops
 
 - functions
 
 - classes, objects
+
+- source control
