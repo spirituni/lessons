@@ -1,5 +1,6 @@
 var p = 'x';
 var message = 'wins';
+var turns = 0;
 
 window.onload = function() {
   restart();
@@ -9,6 +10,7 @@ window.onload = function() {
 function restart() {
   // reset player
   p = 'x';
+  turns = 0;
   message.innerHTML = 'next player: ' + p;
   winner = '';
 
@@ -28,6 +30,8 @@ function restart() {
 }
 
 function clicked(b) {
+  ++turns;
+  console.log(turns);
   b.disabled = true;
   b.innerHTML = p;
 
@@ -53,7 +57,8 @@ function clicked(b) {
     document.querySelectorAll('button.grid').forEach(b => {
       b.disabled = true;
     });
-
+  } else if (turns == 9) {
+    message.innerHTML = 'tie!';
   } else {
     message.innerHTML = 'next player: ' + p;
   }
