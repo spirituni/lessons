@@ -31,7 +31,7 @@ function restart() {
 
 function clicked(b) {
   ++turns;
-  console.log(turns);
+  // console.log(turns);
   b.disabled = true;
   b.innerHTML = p;
 
