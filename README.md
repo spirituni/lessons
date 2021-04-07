@@ -8,7 +8,7 @@
 
 3 - data types | [stream](https://youtu.be/E4P_IDJNJq8), [examples](https://github.com/spirituni/lessons/blob/main/3%20-%20data%20types/types.cpp)
 
-4 - arrays | [stream](), [solution]()
+4 - arrays | [stream](https://youtu.be/1ZpZdoZ87oU), [solution](https://github.com/spirituni/lessons/pull/3)
 
 # upcoming
 
